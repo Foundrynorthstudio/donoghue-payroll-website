@@ -1,0 +1,30 @@
+---
+const path = Astro.url.pathname.replace(/\/$/, '') || '/';
+const payrollHref = path === '/' ? '#payroll' : '/#payroll';
+const contractsHref = path === '/' ? '#contracts' : '/#contracts';
+const contactHref = path === '/' ? '#contact' : '/#contact';
+---
+
+<header class="border-b border-brand-line bg-white">
+  <div class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-4">
+    <a href="/" class="shrink-0" aria-label="Donoghue Payroll Services">
+      <img src="/logo.png" alt="Donoghue Payroll Services" class="h-11 w-auto sm:h-14" />
+    </a>
+    <nav class="hidden items-center gap-7 text-sm font-semibold text-brand-muted md:flex" aria-label="Primary">
+      <a href={payrollHref} class="hover:text-brand">Payroll</a>
+      <a href={contractsHref} class="hover:text-brand">Contracts &amp; handbooks</a>
+      <a href={contactHref} class="hover:text-brand">Contact</a>
+    </nav>
+    <a
+      href={contactHref}
+      class="rounded-full bg-brand px-4 py-2 text-sm font-semibold text-white hover:bg-brand-dark sm:px-5 sm:py-2.5"
+    >
+      Get in touch
+    </a>
+  </div>
+  <nav class="flex justify-center gap-5 border-t border-brand-line px-5 py-2 text-sm font-semibold text-brand-muted md:hidden" aria-label="Mobile">
+    <a href={payrollHref} class="hover:text-brand">Payroll</a>
+    <a href={contractsHref} class="hover:text-brand">Contracts</a>
+    <a href={contactHref} class="hover:text-brand">Contact</a>
+  </nav>
+</header>

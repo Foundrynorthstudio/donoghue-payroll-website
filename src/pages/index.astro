@@ -1,0 +1,227 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const payrollPoints = [
+  {
+    title: 'Employee payments, tax compliance and reporting',
+    body: 'We cover all aspects of employee payments, tax compliance and reporting, so pay, deductions and returns are handled in one place.',
+  },
+  {
+    title: 'Accuracy and attention to detail at all times',
+    body: 'Accuracy and attention to detail at all times. Payroll has to be right, and that is how we work - every pay run, every submission.',
+  },
+  {
+    title: 'Pensions and benefits management',
+    body: 'Pensions and benefits management, including workplace pension duties, so contributions and records stay in line with the scheme and with HMRC.',
+  },
+  {
+    title: 'Leave and absence management',
+    body: 'Leave and absence management, so holiday, sick leave and other absences are recorded properly and paid correctly.',
+  },
+  {
+    title: 'Employee and employer self-service portal',
+    body: 'An employee and employer self-service portal, so your team can access payslips and you can review payroll information without chasing paperwork.',
+  },
+  {
+    title: 'CIS and year end rebates',
+    body: 'Management of CIS and year end rebates, so Construction Industry Scheme deductions and year-end repayments are dealt with promptly and accurately.',
+  },
+  {
+    title: 'Compliance with regulatory updates',
+    body: 'Compliance with regulatory updates. When the rules change, we apply them to your payroll so you do not have to keep on top of every shift in legislation.',
+  },
+];
+---
+
+<Layout
+  title="Donoghue Payroll Services | Payroll, contracts and handbooks"
+  description="Payroll services covering employee payments, tax compliance and reporting, plus contracts of employment and company handbooks. A legal requirement - we can help."
+>
+  <Header />
+
+  <main>
+    <section class="bg-brand-mint-2">
+      <div class="mx-auto grid max-w-6xl items-center gap-10 px-5 py-16 md:grid-cols-[1.1fr_0.9fr] md:py-24">
+        <div>
+          <p class="heading-caps text-xs font-semibold text-brand">Donoghue Payroll Services</p>
+          <h1 class="mt-4 max-w-xl font-sans text-4xl font-bold leading-tight tracking-tight text-brand-ink sm:text-5xl">
+            Payroll, contracts and company handbooks - done properly.
+          </h1>
+          <p class="mt-5 max-w-xl text-lg leading-relaxed text-brand-muted">
+            We cover all aspects of employee payments, tax compliance and reporting. Written contracts and company handbooks are a legal requirement - we can help.
+          </p>
+          <div class="mt-8 flex flex-wrap gap-3">
+            <a href="#contact" class="rounded-full bg-brand px-6 py-3 text-sm font-semibold text-white hover:bg-brand-dark">
+              Request a quote
+            </a>
+            <a href="#payroll" class="rounded-full border border-brand-line bg-white px-6 py-3 text-sm font-semibold text-brand-ink hover:border-brand">
+              Payroll services
+            </a>
+          </div>
+        </div>
+        <div class="rounded-2xl border border-brand-line bg-white p-8 shadow-sm">
+          <p class="heading-caps text-xs font-semibold text-brand">Part of Donoghue &amp; Co</p>
+          <p class="mt-3 text-brand-muted leading-relaxed">
+            Accountants and business advisers in Falkirk and Glasgow, providing a professional, personalised and friendly service for small and medium sized businesses.
+          </p>
+          <dl class="mt-6 space-y-3 text-sm">
+            <div class="flex justify-between gap-4 border-t border-brand-line pt-3">
+              <dt class="text-brand-muted">Falkirk</dt>
+              <dd class="font-semibold"><a href="tel:+441324411809">01324 411809</a></dd>
+            </div>
+            <div class="flex justify-between gap-4 border-t border-brand-line pt-3">
+              <dt class="text-brand-muted">Glasgow</dt>
+              <dd class="font-semibold"><a href="tel:+441413541584">0141 354 1584</a></dd>
+            </div>
+            <div class="flex justify-between gap-4 border-t border-brand-line pt-3">
+              <dt class="text-brand-muted">Payroll</dt>
+              <dd class="font-semibold"><a href="mailto:payroll@donoghue-co.com">payroll@donoghue-co.com</a></dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <div class="bg-brand">
+      <p class="heading-caps mx-auto max-w-6xl px-5 py-4 text-center text-sm font-semibold tracking-wider text-white">
+        Call us now <a class="underline decoration-white/40 underline-offset-4" href="tel:+441324411809">01324 411809</a>
+        or
+        <a class="underline decoration-white/40 underline-offset-4" href="tel:+441413541584">0141 354 1584</a>
+      </p>
+    </div>
+
+    <section id="payroll" class="scroll-mt-24">
+      <div class="mx-auto max-w-6xl px-5 py-16 md:py-20">
+        <p class="heading-caps text-xs font-semibold text-brand">Payroll services</p>
+        <h2 class="mt-3 max-w-2xl text-3xl font-bold tracking-tight text-brand-ink sm:text-4xl">
+          Everything you need to pay your people correctly.
+        </h2>
+        <p class="mt-4 max-w-2xl text-lg leading-relaxed text-brand-muted">
+          We cover all aspects of employee payments, tax compliance and reporting, with accuracy and attention to detail at all times.
+        </p>
+        <ol class="mt-10 divide-y border-y border-brand-line">
+          {
+            payrollPoints.map((point, index) => (
+              <li class="grid gap-3 py-6 md:grid-cols-[3rem_1fr] md:gap-8">
+                <span class="heading-caps text-sm font-semibold text-brand">{String(index + 1).padStart(2, '0')}</span>
+                <div>
+                  <h3 class="text-lg font-semibold text-brand-ink">{point.title}</h3>
+                  <p class="mt-2 max-w-3xl leading-relaxed text-brand-muted">{point.body}</p>
+                </div>
+              </li>
+            ))
+          }
+        </ol>
+      </div>
+    </section>
+
+    <section id="contracts" class="scroll-mt-24 bg-brand-mint">
+      <div class="mx-auto max-w-6xl px-5 py-16 md:py-20">
+        <p class="heading-caps text-xs font-semibold text-brand">Contracts of employment &amp; company handbooks</p>
+        <h2 class="mt-3 max-w-3xl text-3xl font-bold tracking-tight text-brand-ink sm:text-4xl">
+          This is a legal requirement - we can help.
+        </h2>
+        <p class="mt-5 max-w-3xl text-lg leading-relaxed text-brand-muted">
+          UK law requires employers to provide every employee and worker with a written statement of employment particulars. That written statement must cover the main conditions and key details of their employment. Relying on verbal promises or job offer letters alone is very risky for employers.
+        </p>
+        <p class="mt-4 max-w-3xl leading-relaxed text-brand-muted">
+          For most businesses, it makes sense to provide a full contract of employment. This keeps everything in one place and avoids legal grey areas. You're legally required to give key details in writing, and a full contract is the best way to do this.
+        </p>
+
+        <div class="mt-10 grid gap-6 md:grid-cols-2">
+          <article class="rounded-2xl bg-white p-8 shadow-sm">
+            <h3 class="text-xl font-semibold text-brand-ink">Contracts of employment</h3>
+            <p class="mt-3 leading-relaxed text-brand-muted">
+              Contracts are for each individual employee, outlining terms and conditions of employment, and can be adapted to suit. They govern the employment relationship with a document that meets the minimum legal standard and takes account of recommended best HR practices.
+            </p>
+          </article>
+          <article class="rounded-2xl bg-white p-8 shadow-sm">
+            <h3 class="text-xl font-semibold text-brand-ink">Company handbooks</h3>
+            <p class="mt-3 leading-relaxed text-brand-muted">
+              Handbooks set out company policies - for example disciplinary procedures, health and safety policy, equality policy and statutory payments. Each handbook is tailored to the company and totally bespoke to its needs.
+            </p>
+          </article>
+        </div>
+
+        <p class="mt-8 max-w-3xl leading-relaxed text-brand-muted">
+          Get in touch for more information and a fee quote.
+        </p>
+      </div>
+    </section>
+
+    <section id="contact" class="scroll-mt-24">
+      <div class="mx-auto grid max-w-6xl gap-12 px-5 py-16 md:grid-cols-2 md:py-20">
+        <div>
+          <p class="heading-caps text-xs font-semibold text-brand">Contact</p>
+          <h2 class="mt-3 text-3xl font-bold tracking-tight text-brand-ink">Please get in touch</h2>
+          <p class="mt-4 leading-relaxed text-brand-muted">
+            Tell us whether you need payroll, contracts of employment, a company handbook, or all three. We will come back with more information and a fee quote.
+          </p>
+          <ul class="mt-8 space-y-4 text-brand-ink">
+            <li>
+              <span class="block text-sm text-brand-muted">Email</span>
+              <a class="font-semibold hover:text-brand" href="mailto:payroll@donoghue-co.com">payroll@donoghue-co.com</a>
+            </li>
+            <li>
+              <span class="block text-sm text-brand-muted">Falkirk</span>
+              <a class="font-semibold hover:text-brand" href="tel:+441324411809">01324 411809</a>
+              <span class="block text-sm text-brand-muted">19a Wellside Place, Falkirk, FK1 5RL</span>
+            </li>
+            <li>
+              <span class="block text-sm text-brand-muted">Glasgow</span>
+              <a class="font-semibold hover:text-brand" href="tel:+441413541584">0141 354 1584</a>
+              <span class="block text-sm text-brand-muted">272 Bath Street, Glasgow, G2 4JR</span>
+            </li>
+          </ul>
+        </div>
+
+        <form
+          class="rounded-2xl border border-brand-line bg-white p-6 shadow-sm"
+          name="contact"
+          method="POST"
+          data-netlify="true"
+          netlify-honeypot="bot-field"
+          action="/thanks"
+        >
+          <input type="hidden" name="form-name" value="contact" />
+          <p class="hidden">
+            <label>Don't fill this in <input name="bot-field" /></label>
+          </p>
+          <div class="grid gap-4">
+            <label class="text-sm font-semibold">
+              Name
+              <input class="mt-1 w-full rounded-lg border border-brand-line px-3 py-2.5 font-normal" type="text" name="name" required />
+            </label>
+            <label class="text-sm font-semibold">
+              Email
+              <input class="mt-1 w-full rounded-lg border border-brand-line px-3 py-2.5 font-normal" type="email" name="email" required />
+            </label>
+            <label class="text-sm font-semibold">
+              Phone
+              <input class="mt-1 w-full rounded-lg border border-brand-line px-3 py-2.5 font-normal" type="tel" name="phone" />
+            </label>
+            <fieldset>
+              <legend class="text-sm font-semibold">I'm interested in</legend>
+              <div class="mt-2 grid gap-2 text-sm font-normal text-brand-muted">
+                <label class="flex items-center gap-2"><input type="checkbox" name="interest" value="Payroll services" /> Payroll services</label>
+                <label class="flex items-center gap-2"><input type="checkbox" name="interest" value="Contracts of employment" /> Contracts of employment</label>
+                <label class="flex items-center gap-2"><input type="checkbox" name="interest" value="Company handbook" /> Company handbook</label>
+              </div>
+            </fieldset>
+            <label class="text-sm font-semibold">
+              Message
+              <textarea class="mt-1 w-full rounded-lg border border-brand-line px-3 py-2.5 font-normal" name="message" rows="4" required></textarea>
+            </label>
+            <button class="rounded-full bg-brand px-6 py-3 text-sm font-semibold text-white hover:bg-brand-dark" type="submit">
+              Send message
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>

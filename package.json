@@ -1,0 +1,20 @@
+{
+  "name": "donoghue-payroll-website",
+  "type": "module",
+  "version": "1.0.0",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "dependencies": {
+    "@fontsource-variable/source-sans-3": "^5.2.8",
+    "@fontsource/cormorant-garamond": "^5.2.8",
+    "@tailwindcss/vite": "^4.1.13",
+    "astro": "^5.13.7",
+    "tailwindcss": "^4.1.13"
+  }
+}

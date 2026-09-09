@@ -1,0 +1,31 @@
+@import "@fontsource-variable/source-sans-3/wght.css";
+@import "@fontsource/cormorant-garamond/700.css";
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Source Sans 3 Variable", "Source Sans 3", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Cormorant Garamond", "Times New Roman", serif;
+
+  --color-brand: #008f40;
+  --color-brand-dark: #006e32;
+  --color-brand-ink: #111111;
+  --color-brand-muted: #4a524c;
+  --color-brand-mint: #e8f6e3;
+  --color-brand-mint-2: #f4faf1;
+  --color-brand-line: #d7e6d4;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--color-brand-ink);
+  background: #fff;
+}
+
+.heading-caps {
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
