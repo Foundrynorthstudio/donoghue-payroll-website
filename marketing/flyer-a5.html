@@ -46,6 +46,17 @@
       padding: 8px 16px;
       border-radius: 999px;
     }
+    .logo {
+      display: block;
+      width: 56mm;
+      max-width: 100%;
+      height: auto;
+      aspect-ratio: 1186 / 295;
+      object-fit: contain;
+      object-position: left center;
+      flex-shrink: 0;
+      align-self: flex-start;
+    }
     @media screen {
       body { background: #cfd8cc; padding: 24px 0; }
       .page {
@@ -63,7 +74,7 @@
       <div style="position:absolute; inset:0; background:linear-gradient(180deg, rgba(244,250,241,.96) 0%, rgba(244,250,241,.88) 42%, rgba(232,246,227,.78) 100%);"></div>
     </div>
     <div style="position:relative; height:100%; padding:10mm 10mm 9mm; display:flex; flex-direction:column;">
-      <img src="assets/logo-transparent.png" alt="Donoghue Payroll Services" style="height:14mm; width:auto;" />
+      <img class="logo" src="assets/logo-transparent.png" alt="Donoghue Payroll Services" width="1186" height="295" />
       <p class="caps" style="margin:4mm 0 0; font-size:7.5pt;">Part of Donoghue &amp; Co, Falkirk and Glasgow</p>
       <h1 style="margin:3mm 0 0; font-size:18pt; line-height:1.15; font-weight:700;">
         Payroll, contracts and company handbooks — done properly.
