@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <title>Donoghue Payroll Services — social post</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: #111;
+    }
+    .canvas {
+      position: relative;
+      width: 1080px;
+      height: 1080px;
+      overflow: hidden;
+      font-family: "Source Sans 3", "Source Sans Pro", Arial, sans-serif;
+      color: #111111;
+      background: #f4faf1;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+    .bg {
+      position: absolute;
+      inset: 0;
+    }
+    .bg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 28%;
+    }
+    .wash {
+      position: absolute;
+      inset: 0;
+      background: #008f40;
+      mix-blend-mode: multiply;
+      opacity: .18;
+    }
+    .fade {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(244,250,241,.97) 0%, rgba(244,250,241,.9) 38%, rgba(232,246,227,.78) 100%);
+    }
+    .content {
+      position: relative;
+      z-index: 1;
+      height: 100%;
+      padding: 72px 72px 64px;
+      display: flex;
+      flex-direction: column;
+    }
+    .logo {
+      display: block;
+      width: 480px;
+      height: auto;
+      aspect-ratio: 1186 / 295;
+      object-fit: contain;
+      object-position: left center;
+      flex-shrink: 0;
+    }
+    .caps {
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: #008f40;
+    }
+    .card {
+      background: rgba(255,255,255,.9);
+      border: 1px solid #d7e6d4;
+      border-radius: 16px;
+      padding: 18px 22px;
+    }
+    .card p { margin: 0; }
+    .cta {
+      margin-top: auto;
+      background: #008f40;
+      color: #fff;
+      border-radius: 18px;
+      padding: 28px 32px;
+    }
+  </style>
+</head>
+<body>
+  <div class="canvas">
+    <div class="bg">
+      <img src="assets/office.jpg" alt="" />
+      <div class="wash"></div>
+      <div class="fade"></div>
+    </div>
+    <div class="content">
+      <img class="logo" src="assets/logo-transparent.png" alt="Donoghue Payroll Services" width="1186" height="295" />
+      <h1 style="margin:32px 0 0; font-size:52px; line-height:1.12; font-weight:700; letter-spacing:-0.02em;">
+        Payroll, contracts and company handbooks — done properly.
+      </h1>
+
+      <div style="margin:32px 0 0; display:flex; flex-direction:column; gap:12px;">
+        <div class="card">
+          <p class="caps" style="font-size:13px;">Payroll</p>
+          <p style="margin-top:4px; font-size:24px; font-weight:700; line-height:1.2;">Pay your people correctly, every time.</p>
+        </div>
+        <div class="card">
+          <p class="caps" style="font-size:13px;">Contracts of employment</p>
+          <p style="margin-top:4px; font-size:24px; font-weight:700; line-height:1.2;">A legal requirement — we can help.</p>
+        </div>
+        <div class="card">
+          <p class="caps" style="font-size:13px;">Company handbooks</p>
+          <p style="margin-top:4px; font-size:24px; font-weight:700; line-height:1.2;">Policies tailored to your business.</p>
+        </div>
+      </div>
+
+      <div class="cta">
+        <p class="caps" style="margin:0; color:#fff; font-size:14px;">Call us now for a fee quote</p>
+        <p style="margin:10px 0 0; font-size:30px; font-weight:700; line-height:1.25;">
+          07862 098770
+        </p>
+        <p style="margin:12px 0 0; font-size:20px; opacity:.95;">payroll@donoghuepayrollservices.com</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

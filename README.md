@@ -7,4 +7,4 @@ npm install
 npm run dev
 ```
 
-The contact form uses Netlify Forms. After the first deploy, set the notification email to payroll@donoghue-co.com in the Netlify dashboard.
+The contact form uses Netlify Forms. After the first deploy, set the notification email to payroll@donoghuepayrollservices.com in the Netlify dashboard.
