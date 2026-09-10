@@ -24,14 +24,39 @@ import Footer from '../components/Footer.astro';
             <h2 class="text-2xl font-bold tracking-tight text-brand-ink">HTML emailer</h2>
             <p class="mt-1 text-sm text-brand-muted">How the email will look when opened. Scroll inside the frame to read it all.</p>
           </div>
-          <a
-            href="/marketing/emailer.html"
-            target="_blank"
-            rel="noreferrer"
-            class="rounded-full border border-brand-line bg-white px-4 py-2 text-sm font-semibold text-brand-ink hover:border-brand"
-          >
-            Open emailer in a new tab
-          </a>
+          <div class="flex flex-wrap gap-2">
+            <a
+              href="/marketing/emailer.html"
+              target="_blank"
+              rel="noreferrer"
+              class="rounded-full border border-brand-line bg-white px-4 py-2 text-sm font-semibold text-brand-ink hover:border-brand"
+            >
+              Open emailer in a new tab
+            </a>
+            <a
+              href="/marketing/emailer-send.html"
+              download="donoghue-payroll-emailer.html"
+              class="rounded-full bg-brand px-4 py-2 text-sm font-semibold text-white hover:bg-brand-dark"
+            >
+              Download HTML to send
+            </a>
+          </div>
+        </div>
+        <div class="mt-6 max-w-3xl rounded-2xl border border-brand-line bg-white p-6 text-sm leading-relaxed text-brand-muted">
+          <h3 class="text-base font-semibold text-brand-ink">How to send this as an email</h3>
+          <p class="mt-2">
+            Do not attach the HTML file in Gmail or Outlook — the client will just get a file, not a designed email. Use Mailchimp (or Campaign Monitor) and paste the code.
+          </p>
+          <ol class="mt-3 list-decimal space-y-2 pl-5">
+            <li>Download the HTML using the green button above.</li>
+            <li>In Mailchimp: <strong class="text-brand-ink">Create → Email → Regular</strong>.</li>
+            <li>When asked for a template, choose <strong class="text-brand-ink">Code your own</strong> or <strong class="text-brand-ink">Paste in code</strong>.</li>
+            <li>Open the downloaded file in a text editor (TextEdit, VS Code, or Cursor), select all, copy, and paste it into Mailchimp.</li>
+            <li>Send a test to yourself first. If the logo or photo is missing, Mailchimp will let you upload those images. Then send the test on to the client.</li>
+          </ol>
+          <p class="mt-3">
+            A quick alternative in Apple Mail or Outlook desktop: open the emailer in a new tab, press Cmd+A then Cmd+C, start a new email, and paste. Gmail in the browser usually mangles this, so Mailchimp is the reliable route.
+          </p>
         </div>
         <div class="mt-5 overflow-x-auto rounded-2xl border border-brand-line bg-[#f4faf1] p-4 shadow-sm">
           <iframe
