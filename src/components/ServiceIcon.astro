@@ -1,6 +1,6 @@
 ---
 interface Props {
-  name: 'payments' | 'accuracy' | 'pensions' | 'leave' | 'portal' | 'cis' | 'compliance' | 'contract' | 'handbook';
+  name: 'payments' | 'accuracy' | 'pensions' | 'leave' | 'portal' | 'cis' | 'p11d' | 'compliance' | 'contract' | 'handbook';
   class?: string;
 }
 
@@ -67,6 +67,15 @@ const { name, class: className = 'h-6 w-6' } = Astro.props;
         <path d="M6.5 20V10.5L12 6l5.5 4.5V20" />
         <path d="M10 20v-5h4v5" />
         <path d="M9 13h.01M15 13h.01" />
+      </>
+    )
+  }
+  {
+    name === 'p11d' && (
+      <>
+        <path d="M14.5 3.5H7.5A2 2 0 0 0 5.5 5.5v13A2 2 0 0 0 7.5 20.5h9a2 2 0 0 0 2-2V8.5L14.5 3.5Z" />
+        <path d="M14.5 3.5V8.5h5" />
+        <path d="M9 12h6M9 15.5h4" />
       </>
     )
   }
